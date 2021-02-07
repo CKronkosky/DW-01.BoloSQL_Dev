@@ -1,0 +1,122 @@
+@startuml bolosql_dev.dbo.tbl_glosf_detail
+entity "bolosql_prod.dbo.trans" as a #white {
+  u2_id
+  acct_id : <<FK>>
+  acct : <<FK>>
+  cost_center : <<FK>>
+  name : <<FK>>
+  voucher : <<FK>>
+  source_document : <<FK>>
+  --
+  acctg_period
+  activity_date
+  app
+  company
+  description
+  stat1_amt
+  stat1_qty1
+  project
+  source_table
+  system_date
+  system_user_id
+  curr_status
+  doi
+  doi_session
+  product
+  cnv_id
+  type
+  time_stamp
+  direct_bill
+  jib_deck
+  jib_deck_session
+  jib_alloc_date
+  src_alloc_trans_id
+  cc_alloc_date
+  cc_alloc_id
+  alloc_enabled
+  alloc_pct
+}
+entity "bolosql_dev.dbo.vw_bc_coa" as b #white {
+  acct_id
+  --
+  acct_name
+}
+entity "bolosql_dev.dbo.vw_bc_coa_grps" as c #white {
+  incl_acct
+  --
+  acct_grp
+  acct_grp_desc
+}
+entity "bolosql_dev.dbo.vw_bc_coa_grps" as cc #white {
+  incl_acct
+  --
+  incl_acct_plain
+  acct_grp
+  acct_grp_desc
+}
+entity "bolosql_dev.dbo.vw_bc_prop_cc_master" as d #white {
+  *u2_id
+  --
+  shadow_key
+  cc_type
+  category
+  cc_name
+}
+entity "bolosql_dev.dbo.tbl_bc_PropertyMaster" as dd #white {
+  *u2_id
+  --
+  acquisition
+  acq_descr
+  eff_date
+  acq_summ_grp
+  fieldname
+  state
+  county_name
+  operator
+  oper_name
+  prop_type
+  lease_shadow
+  lease_cc_name
+  area_cc_name
+  fmn_cc_name
+  eng_cc_name
+  supt_cc_name
+  op_cc_name
+  co_cc_name
+  fieldid
+  distr
+  region
+  supt2
+  mgmt_rollup
+}
+entity "bolosql_prod.dbo.name" as e #white {
+  *u2_id
+  --
+  name1
+}
+entity "bolosql_prod.dbo.voucher" as f #white {
+  *u2_id
+  --
+  appr
+  appr_date
+}
+entity "bolosql_prod.dbo.ap_inv" as g #white {
+  *u2_id
+  image_ref : <<FK>>
+}
+entity "bolosql_prod.dbo.document" as h #white {
+  *u2_id
+  --
+  [file_id]
+}
+
+a -- b : acct = acct_id
+a -- c : acct = incl_acct
+a -- cc : acct = incl_acct
+a -- d : cost_center = u2_id
+a -- dd : cost_center = u2_id
+a -- e : name = u2_id
+a -- f : voucher = u2_id
+a -- g : source_document = u2_id
+g -- h : image_ref = u2_id
+@enduml

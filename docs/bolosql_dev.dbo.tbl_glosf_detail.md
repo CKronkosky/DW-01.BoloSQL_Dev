@@ -1,11 +1,11 @@
-# BoloSQL_dev.dbo.tbl_glosf_detail
+## BoloSQL_dev.dbo.tbl_glosf_detail
 
 BoloSQL_dev.dbo.sp_los_build_glosf <br>
 Lines 35 to 86
 
 Comments: bolosql_prod.dbo.trans is filtered on inner join of bolosql_dev.dbo.vw_bc_coa_grps where (acct_grp_catgy = 'LOSG').
 
-![system overview](http://www.plantuml.com/plantuml/png/fLLDQzmm4BtdLvZqLaWWEPOqvDHBAVHUoY1BOwyIVIZIQ8Cf_U_Lo8gZBLtJqijwtipiU_CXom-9HAHipJ1wuzEp0ON7QpNwQneDpCKr5Gy9RIxGaQPbk7nD3D6hDJCAbou7aGOnl7ivQCBXnyKmv5lGgZo5b5IiuSDmT_Vfy_rzS_LO-aGWYm36tks4nHuVVPQ7qvJaSvG8oijiqPsGNbqrfHa2HkrLXQIFfGjGWf1n25NU1k6MOYbCCkf0sZic9q4t82njzZCjDmM4w1zHqfi-YT4WmoKHMcRlK4uOrr7872CmKquivlNw2mbJMYLvgBaoItTS_qHBG7veY_nV6_XFEXPz6BKn1Jtg4HJAfyxiADabZF5oAolAvgYRQwN9Bgd7DRgQwBZDDnnAeJ-xSt5wW8ulC4gGNjIZCVP7ens9Vad0o_uRDfXZI9LIzfJQIGDCr9DoRcS2h_SVDVP4EWS48xJx7zaGVG0fmOf46AkuwhNVvzjkPEaWb7-19rpMNRL38WNXx6Dpxe-Ktt0M_bg4CTBofHFUKHRoEUkasojIK6ql5XkdgPwUvaxPsZQ9IQDHN4rxaMgfFZjQe7cv144-DlFLNOVIUZCe4iBQ-0PRbomPKNHmigv3wEOEfHoeWpvqGFeErBfhwqeduk8YpgNnnd5RddQs1D4RamEF-jmToOHrj7X-ifnpiqVIxh_AC-riA8JO7dKVUvGYW7R7oZZ_aL5RCID4dBQhTO_kzHwkX8Vp9NwRjC62lnUo2r5ymrZuwsVXutOxLB_S_DtRjqREXrI9TD-Kab3LMt0tYYN8YpZrSlTj-gU1kGH--mPj2JCd74h2DiCjz81EPMj-0G00)
+![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/ckronkosky/DW-01.BoloSQL_Dev/docs/diagrams/src/bolosql_dev.dbo.tbl_glosf_detail.puml)
 
 ``` sql
 truncate table bolosql_dev.dbo.tbl_glosf_detail

@@ -5,7 +5,7 @@ Lines 35 to 86
 
 Comments: bolosql_prod.dbo.trans is filtered on inner join of bolosql_dev.dbo.vw_bc_coa_grps where (acct_grp_catgy = 'LOSG').
 
-![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/ckronkosky/DW-01.BoloSQL_Dev/docs/diagrams/src/bolosql_dev.dbo.tbl_glosf_detail.puml)
+![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/ckronkosky/DW-01.BoloSQL_Dev/master/docs/diagrams/src/bolosql_dev.dbo.tbl_glosf_detail.puml)
 
 ``` sql
 truncate table bolosql_dev.dbo.tbl_glosf_detail

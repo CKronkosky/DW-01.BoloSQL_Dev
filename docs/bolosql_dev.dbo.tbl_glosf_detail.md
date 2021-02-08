@@ -1,17 +1,9 @@
----
-summary:     Test of this
-description: This is a Test Yep
-
----
-
-
-
 ## BoloSQL_dev.dbo.tbl_glosf_detail
 
----
+``` yaml
 Test: This is still a test
 Help: This is help
----
+```
 
 
 ### Creation Script

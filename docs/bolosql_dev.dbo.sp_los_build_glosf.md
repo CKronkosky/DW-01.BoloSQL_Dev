@@ -1,19 +1,28 @@
-## BoloSQL_dev.dbo.tbl_glosf_detail
+## bolosql_dev.dbo.sp_los_build_glosf
 
-``` yaml
-Test: This is still a test
-Help: This is help
-```
+Stored proceedure to update tables: <br>
 
+bolosql_dev.dbo.tbl_glosf_detail <br>
+bolosql_dev.dbo.tbl_glosf_summary <br>
+bolosql_dev.dbo.tbl_glosf_summary_npi <br>
+bolosql_dev.dbo.tbl_glosf_unec <br>
+bolosql_dev.dbo.tbl_glosf_summary_lse <br>
+bolosql_dev.dbo.tbl_glosf_summary_phd <br>
+bolosql_dev.dbo.tbl_glosf_summary_uniq  <br>
 
-### Creation Script
-NONE
-
-### Update Script
-BoloSQL_dev.dbo.sp_los_build_glosf <br>
+### BoloSQL_dev.dbo.tbl_glosf_detail
 Lines 35 to 86
 
-### Comments: 
+1. TRUNCATE's the cotents of boloSQL_dev.dbo.tbl_glosf_detail
+2. insert bolosql_prod.dbo.trans into boloSQL_dev.dbo.tbl_glosf_detail
+    - GLOS transactions for Legacy Reserves Operating LP (Company 601)
+    - Voucher appr_date not null
+    - Transaction acctg_period >= 1/1/2011
+    - Transaction acct not in 145..150, 152..600, 153..600 , 154..600, 154..650, 154..700, 154..700, 157..600, 158..600
+    - 
+
+3. deletes from 
+ 
 bolosql_prod.dbo.trans is filtered on inner join of bolosql_dev.dbo.vw_bc_coa_grps where (acct_grp_catgy = 'LOSG').
 
 ![system overview](http://www.plantuml.com/plantuml/proxy?cache=no&src=https://raw.github.com/CKronkosky/DW-01.BoloSQL_Dev/master/docs/diagrams/src/bolosql_dev.dbo.tbl_glosf_detail.puml)

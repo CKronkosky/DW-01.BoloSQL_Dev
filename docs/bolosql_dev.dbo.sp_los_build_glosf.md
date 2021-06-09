@@ -25,7 +25,7 @@ Lines 35 to 86
  
 bolosql_prod.dbo.trans is filtered on inner join of bolosql_dev.dbo.vw_bc_coa_grps where (acct_grp_catgy = 'LOSG').
 
-![system overview](diagrams\out\bolosql_devdbotbl_glosf_detail\bolosql_devdbotbl_glosf_detail.png)
+![system overview](diagrams/out/bolosql_devdbotbl_glosf_detail/bolosql_devdbotbl_glosf_detail.png)
 
 ``` sql
 truncate table bolosql_dev.dbo.tbl_glosf_detail
